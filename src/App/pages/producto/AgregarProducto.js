@@ -7,7 +7,7 @@ import AddFormProducto from '../../Components/producto/AddFormProducto';
 const AgregarProducto = () => {
     const [ producto, setproducto ] = useState({
         nombre: '',
-        vigencia: '',
+        vigencia: 0,
         idMarca: 0        
     });
     const [ marcaSeleccionada , setmarcaSeleccionada ] = useState({});
@@ -34,6 +34,8 @@ const AgregarProducto = () => {
     return (
         <>  
             <AddFormProducto
+            producto={producto}
+            onChange={handleChange}
             />
         </>
     );
